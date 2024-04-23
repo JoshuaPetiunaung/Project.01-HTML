@@ -2,7 +2,6 @@
 
 const articles = document.querySelectorAll('article');
 
-
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
@@ -25,3 +24,8 @@ function handleScroll() {
 
 document.addEventListener('DOMContentLoaded', handleScroll);
 document.addEventListener('scroll', handleScroll);
+
+const credit = document.createElement("span");
+credit.textContent = "Created by: JoshuaPetiunaung";
+credit.setAttribute("id", "credit");
+document.body.appendChild(credit);

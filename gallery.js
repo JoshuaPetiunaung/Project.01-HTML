@@ -1,5 +1,3 @@
-// menambahkan image slider
-
 document.addEventListener("DOMContentLoaded", function() {
     const prevButton = document.getElementById("prev-button");
     const nextButton = document.getElementById("next-button");
@@ -50,4 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
         modal.style.display = "none";
         overlay.style.display = "none"; 
     });
+
+    const credit = document.getElementById("credit");
+    credit.textContent = "Created by: JoshuaPetiunaung";
 });
