@@ -7,15 +7,32 @@
     <title>Gallery</title>
 </head>
 <body>
-    <img src="—Pngtree—keyboard piano electronic piano_4519739.png"class="small-image">
+    <img src="—Pngtree—keyboard piano electronic piano_4519739.png" class="small-image">
     <h2 style="margin: 0; color: white;">My Gallery</h2> <br>
-    <div class="gallery-container">
-        <img src="Gallery/Bros.jpeg" width="300" height="300">
-        <img src="Gallery/DE ROKI.jpeg" width="300" height="300">
-        <img src="Gallery/Meme.jpeg" width="300" height="300">
-        <img src="Gallery/em fen 😔😔.jpeg" width="300" height="300">
+    <div class="gallery-container slider-container">
+        <div class="slider-images">
+            <img src="Gallery/Bros.jpeg" width="300" height="300">
+            <img src="Gallery/DE ROKI.jpeg" width="300" height="300">
+            <img src="Gallery/Meme.jpeg" width="300" height="300">
+            <img src="Gallery/em fen 😔😔.jpeg" width="300" height="300">
+            <img src="Gallery/1.jpeg" width="300" height="300">
+            <img src="Gallery/2.jpeg" width="300" height="300">
+            <img src="Gallery/3.jpeg" width="300" height="300">
+            <img src="Gallery/4.jpeg" width="300" height="300">
+            <img src="Gallery/5.jpeg" width="300" height="300">
+            <img src="Gallery/6.jpeg" width="300" height="300">
+            <img src="Gallery/7.jpeg" width="300" height="300">
+            <img src="Gallery/8.jpeg" width="300" height="300"> 
+        </div>
+        <button id="prev-button" class="slider-button">◄</button>
+        <button id="next-button" class="slider-button">►</button>
     </div>
-    <a href="index.html"> Kembali
-    </a>
+    <a href="index.html"> Kembali </a>
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+    <div id="overlay" class="overlay"></div>
+    <script src="gallery.js"></script>
 </body>
 </html>
