@@ -155,9 +155,9 @@ a:hover {
 .close {
     color: white;
     position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 40px;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -168,4 +168,3 @@ a:hover {
     text-decoration: none;
     cursor: pointer;
 }
-
