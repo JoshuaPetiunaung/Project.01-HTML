@@ -35,18 +35,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     sliderImages.forEach(function(image) {
         image.addEventListener("click", function() {
-            openModal(this.src);
+            if (!image.classList.contains("enlarged")) {
+                image.classList.add("enlarged");
+            } else {
+                image.classList.remove("enlarged");
+            }
         });
     });
-
-    function openModal(src) {
-        const modal = document.getElementById("myModal");
-        const modalImg = document.getElementById("modalImg");
-        const overlay = document.getElementById("overlay");
-        modalImg.src = src;
-        modal.style.display = "block";
-        overlay.style.display = "block"; 
-    }
 
     const closeModal = document.querySelector(".close");
     closeModal.addEventListener("click", function() {
