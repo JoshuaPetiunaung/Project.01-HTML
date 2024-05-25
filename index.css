@@ -4,8 +4,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    position: relative;
 }
-
 
 header {
     padding: 5px 10px;
@@ -13,31 +13,41 @@ header {
     justify-content: space-between;
     align-items: center;
     color: rgb(255, 253, 249);
+    position: relative;
 }
 
 nav {
-  position: absolute;
-  top: 25px;  
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 0 10px;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 10px;
 }
-  
-  nav a {
+
+nav a {
     text-decoration: none;
     color: rgb(255, 253, 249);
     font-size: 18px;
-    padding: 10px 10px;
-    background-color: transparent;
-    transition: background-color 0.5s ease;
-    border-radius: 10px;
     padding: 10px 15px;
     margin-right: 5px;
-  }
-  
+    border-radius: 10px;
+    transition: background-color 0.5s ease;
+    background-color: transparent;
+}
+
 nav a:hover,
 nav a:focus {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+.logout-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
 }
 
 h6 {
@@ -57,21 +67,24 @@ h6 {
     transform: translate(-50%, -50%);
     text-align: center;
     color: rgb(255, 253, 249);
-  }
-  
-  .centered-content h2 {
+}
+
+.centered-content h2 {
     margin-bottom: 10px;
-  }
-  
-  .centered-content p {
+}
+
+.centered-content p {
     margin-top: 0;
     margin-bottom: 20px;
-  }
-  
-  .small-image {
+}
+
+.small-image {
     width: 65px;
     height: auto;
     position: absolute;
     top: 10px;
     left: 20px;
 }
+
+
+

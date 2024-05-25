@@ -1,5 +1,3 @@
-// menambahkan efek shadow ketika mouse masuk dan keluar pada tombol
-
 document.addEventListener("DOMContentLoaded", function() {
     const buttons = document.querySelectorAll('ul a');
 
@@ -13,6 +11,29 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+    const timeoutInMilliseconds = 120000;
+    let logoutTimer;
+
+    function startLogoutTimer() {
+        clearTimeout(logoutTimer);
+        logoutTimer = setTimeout(() => {
+            window.location.href = "logout.php";
+        }, timeoutInMilliseconds);
+    }
+
+    function resetLogoutTimer() {
+        clearTimeout(logoutTimer);
+        startLogoutTimer();
+    }
+
+    // Memulai timer saat halaman dimuat
+    window.onload = startLogoutTimer;
+
+    // Mereset timer saat terjadi aktivitas pengguna
+    window.addEventListener("mousemove", resetLogoutTimer);
+    window.addEventListener("keypress", resetLogoutTimer);
+
+    // Menambahkan kredit
     const credit = document.createElement("span");
     credit.textContent = "Created by: JoshuaPetiunaung";
     credit.setAttribute("id", "credit");

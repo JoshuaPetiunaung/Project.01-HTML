@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['login_user'])) {
+    header("location: login.php");
+    die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +20,7 @@
     <button class="contact-button" onclick="location.href='mailto:joshuapetiunaung026@student.unsrat.ac.id';">Email</button>
     <button class="contact-button" onclick="location.href='https://wa.link/0791yb';">WhatsApp</button>
     <button class="contact-button" onclick="location.href='https://www.instagram.com/joshuapetiunaung/';">Instagram</button>
+    <button class="contact-button" onclick="location.href='contactus.html';">Contact Us</button>
     <a href="index.html" class="back-button">Kembali</a>
     <script src="contact.js"></script>
 </body>

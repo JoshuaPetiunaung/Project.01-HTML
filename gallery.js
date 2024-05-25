@@ -35,8 +35,12 @@ document.addEventListener("DOMContentLoaded", function() {
         image.addEventListener("click", function() {
             if (!image.classList.contains("enlarged")) {
                 image.classList.add("enlarged");
-            } else {
-                image.classList.remove("enlarged");
+                const modal = document.getElementById("myModal");
+                const overlay = document.getElementById("overlay");
+                const modalImg = document.getElementById("modalImg");
+                modal.style.display = "block";
+                overlay.style.display = "block";
+                modalImg.src = image.src;
             }
         });
     });
@@ -51,4 +55,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const credit = document.getElementById("credit");
     credit.textContent = "Created by: JoshuaPetiunaung";
+
+    const timeoutInMilliseconds = 120000;
+    let logoutTimer;
+
+    function startLogoutTimer() {
+        clearTimeout(logoutTimer);
+        logoutTimer = setTimeout(() => {
+            window.location.href = "logout.php";
+        }, timeoutInMilliseconds);
+    }
+
+    function resetLogoutTimer() {
+        clearTimeout(logoutTimer);
+        startLogoutTimer();
+    }
+
+    window.onload = startLogoutTimer;
+    window.addEventListener("mousemove", resetLogoutTimer);
+    window.addEventListener("keypress", resetLogoutTimer);
 });

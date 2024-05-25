@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['login_user'])) {
+    header("location: login.php");
+    die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +16,11 @@
 </head>
 <body>
 <header>
-    <img src="—Pngtree—keyboard piano electronic piano_4519739.png"class="small-image">
+    <img src="—Pngtree—keyboard piano electronic piano_4519739.png" class="small-image">
     <nav>
         <a href="index.html">Home</a>
         <a href="gallery.html">Gallery</a>
-        <a href="blog.html">Blog</a>
+        <a href="blog.php">Blog</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
@@ -21,5 +29,6 @@
     <p>Welcome to My Portfolio</p>
 </div>
 <h6>Created by: JoshuaPetiunaung</h6>
+<script src="index.js"></script>
 </body>
 </html>

@@ -1,0 +1,36 @@
+<?php
+session_start();
+if (!isset($_SESSION['login_user'])) {
+    header("location: login.php");
+    die();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contactus.css">
+    <title>Contact Us</title>
+</head>
+<body class="centered-body">
+    <div>
+        <h2>Contact Us</h2>
+        <form action="contactus.php" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" required></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
+        <a href="contact.html" class="back-button">Kembali</a>
+    </div>
+
+    <div id="notification" class="notification hidden">Pesan sudah terkirim!</div>
+
+    <script src="contactus.js"></script>
+</body>
+</html>
